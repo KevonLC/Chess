@@ -3,13 +3,18 @@ import java.io.IOException;
 
 public class Main {
 
-	/**
-	 * @param args
-	 * @throws IOException 
-	 */
 	public static void main(String[] args) throws IOException {
-		FileRead fr = new FileRead();
-		fr.readFile(args [0]);
+		inputReader ir = new inputReader();
+		if(args.length == 0)
+		{			
+			System.out.println("Please input a file");
+			System.exit(0);
+		}
+		else
+		{
+			ir.readFile(args [0]);
+		}
+		
 	}
 
 }
